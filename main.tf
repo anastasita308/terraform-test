@@ -23,3 +23,7 @@ resource "azurerm_kubernetes_cluster" "aks-cluster" {
     Environment = "Production"
   }
 }
+
+resource "azurerm_resource_provider_registration" "register-service" {
+  name = "Microsoft.ContainerService"
+}
